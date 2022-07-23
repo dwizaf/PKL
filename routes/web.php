@@ -3,6 +3,8 @@
 use App\Http\Controllers\BidangController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\SeksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +18,7 @@ use App\Http\Controllers\Dashboard;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 // Route::get('/', function () {
@@ -31,3 +33,14 @@ Route::post('/storebidang', [BidangController::class, 'store'] );
 Route::get('/editbidang{id}', [BidangController::class, 'edit'] );
 Route::put('/updatebidang{id}', [BidangController::class, 'update'] );
 Route::delete('/hapusbidang{id}', [BidangController::class, 'destroy'] );
+
+
+Route::get('/seksi', [SeksiController::class, 'index']);
+Route::get('/tambahseksi', [SeksiController::class, 'create'] );
+Route::post('/storeseksi', [SeksiController::class, 'store'] );
+Route::get('/editseksi{id}', [SeksiController::class, 'edit'] );
+Route::put('/updateseksi{id}', [SeksiController::class, 'update'] );
+Route::delete('/hapusseksi{id}', [SeksiController::class, 'destroy'] );
+
+Route::get('/pegawai', [PegawaiController::class, 'index']);
+Route::get('/tambahpegawai', [PegawaiController::class, 'create'] );

@@ -11,4 +11,11 @@ class Bidang extends Model
     protected $table = 'bidang';
     // protected $fillable = ['nama_bidang'];
     protected $guarded = [];
+
+    public function seksi(){
+        return $this->hasMany(Seksi::class);
+    }
+    public function pegawai(){
+        return $this->hasMany(Pegawai::class);
+    }
 }

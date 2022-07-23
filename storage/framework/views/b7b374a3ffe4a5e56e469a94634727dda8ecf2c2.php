@@ -160,8 +160,8 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="/bidang">Bidang</a></li>
-                            <li><a href="#">Seksi</a></li>
-                            <li><a href="#">Pegawai</a></li>
+                            <li><a href="/seksi">Seksi</a></li>
+                            <li><a href="/pegawai">Pegawai</a></li>
                         </ul>
                     </li>
 
