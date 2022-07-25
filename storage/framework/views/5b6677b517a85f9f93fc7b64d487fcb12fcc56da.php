@@ -13,7 +13,7 @@
                     <div class="card-body">
     
                         <div class="email-box">
-                            <h1>bjbjbj</h1>
+                            <h1>Buat Konten</h1>
                             <div class="compose-content mt-5">
                                 <form action="#">
                                     <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> Untuk Bidang :</h5>
