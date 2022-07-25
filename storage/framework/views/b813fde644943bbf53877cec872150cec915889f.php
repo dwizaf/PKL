@@ -16,21 +16,21 @@
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Login Knowledge Management System 
-                        <br> DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</h2>
-				</div>
+				
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-12 col-lg-10">
 					<div class="wrap d-md-flex">
 
 
+						
+
+
 						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
 							<div class="text w-100">
-								<h2>Welcome to login</h2>
-								<p>Don't have an account?</p>
-								<a href="" class="btn btn-white btn-outline-white">Sign Up</a>
+								<h2>Login Knowledge Management System</h2>
+								<p> DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</p>
+								
 							</div>
 			            </div>
 
@@ -52,7 +52,6 @@
 		              <input type="password" class="form-control" placeholder="Password" required>
 		            </div>
 		            <div class="form-group">
-		            	
                         <a href="/dashboard" class="form-control btn btn-primary submit px-3">Sign In</a>
 		            </div>
 		            <div class="form-group d-md-flex">
@@ -68,7 +67,9 @@
 		            </div>
 		          </form>
 		        </div>
+
 		      </div>
+			  
 				</div>
 			</div>
 		</div>
