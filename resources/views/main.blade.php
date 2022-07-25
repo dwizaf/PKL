@@ -165,17 +165,30 @@
                         </ul>
                     </li>
 
-                    <li class="nav-label">Bidang</li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Sekretariat</span>
+                    <li>
+                        <a href="/konten" aria-expanded="false">
+                            <i class="fa fa-clipboard"></i><span class="nav-text">Konten</span>
                         </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Seksi a</a></li>
-                            <li><a href="#">seksi b</a></li>
-                            <li><a href="#">seksi c</a></li>
-                        </ul>
                     </li>
+
+                     <li class="nav-label">Bidang</li>
+
+
+                    {{-- @foreach ($bidang as $data)
+                    <li class="mega-menu mega-menu-sm">
+                        
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-archive"></i><span class="nav-text">{{ $data->nama_bidang }}</span>
+                        </a>
+                        @foreach ($seksi as $data)
+                        <ul aria-expanded="false">
+                            <li><a href="#">{{ $data->nama_seksi }}</a></li>
+                        </ul>
+                        @endforeach
+                    </li>
+                    @endforeach --}}
+                   
+
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="fa fa-archive"></i><span class="nav-text">Bidang Informasi Publik</span>
@@ -196,36 +209,7 @@
                             <li><a href="#">seksi c</a></li>
                         </ul>
                     </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Aplikasi dan Informatika</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Seksi a</a></li>
-                            <li><a href="#">seksi b</a></li>
-                            <li><a href="#">seksi c</a></li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Infrastruktur Teknologi Infomrasi dan Komunikasi</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Seksi a</a></li>
-                            <li><a href="#">seksi b</a></li>
-                            <li><a href="#">seksi c</a></li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Pengelolaan Data dan Statistik</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Seksi a</a></li>
-                            <li><a href="#">seksi b</a></li>
-                            <li><a href="#">seksi c</a></li>
-                        </ul>
-                    </li>
+
             </div>
         </div>
         <!--**********************************

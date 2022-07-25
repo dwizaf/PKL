@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\SeksiController;
+use App\Http\Controllers\KontenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,16 @@ Route::delete('/hapusseksi{id}', [SeksiController::class, 'destroy'] );
 
 Route::get('/pegawai', [PegawaiController::class, 'index']);
 Route::get('/tambahpegawai', [PegawaiController::class, 'create'] );
+
+
+
+
+
+
+Route::get('/konten', [KontenController::class, 'index'] );
+Route::get('/tambahkonten', [KontenController::class, 'create'] );
+Route::get('/detailkonten', [KontenController::class, 'detail'] );
+Route::post('/storekonten', [KontenController::class, 'store'] );
+Route::get('/editkonten{id}', [KontenController::class, 'edit'] );
+Route::put('/updatekonten{id}', [KontenController::class, 'update'] );
+Route::delete('/hapuskonten{id}', [KontenController::class, 'destroy'] );
