@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
-<?php $__env->startSection('container'); ?>
+@extends('main')
+@section('container')
 <html lang="en">
 <head>
-    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
     <div class="container-fluid">
@@ -24,13 +24,13 @@
                                 <label>Bidang</label>
                                 <select type="text" name="" id="bidang" class="form-control">
                                     <option value="">-- Pilih --</option>
-                                    <?php $__currentLoopData = $bidang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        <option value="<?php echo e($item->id); ?>"><?php echo e($item->nama_bidang); ?></option>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    @foreach ($bidang as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama_bidang }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <form action="/storepegawai" method="POST">
-                            <?php echo csrf_field(); ?>
+                            @csrf
                                 <div class="form-group" >
                                     <label>Seksi</label>
                                     <select type="text" name="seksi_id" id="seksi" class="form-control">
@@ -79,7 +79,7 @@
                         let bidang_id = $('#bidang').val();
                         $.ajax({
                             type : 'POST',
-                            url : "<?php echo e(route('getseksi')); ?>",
+                            url : "{{ route('getseksi') }}",
                             data : { bidang_id: bidang_id },
                             cache : false,
 
@@ -97,7 +97,6 @@
 
         </script>
    
-<?php $__env->stopSection(); ?>
+@endsection
 </body>
 </html>
-<?php echo $__env->make('main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\PKL\resources\views/pegawai/create.blade.php ENDPATH**/ ?>

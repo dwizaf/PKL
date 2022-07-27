@@ -14,4 +14,7 @@ class Seksi extends Model
     public function bidang(){
         return $this->belongsTo(Bidang::class);
     }
+    public function pegawai(){
+        return $this->hasMany(Pegawai::class);
+    }
 }

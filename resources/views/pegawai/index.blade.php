@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-
-<?php $__env->startSection('container'); ?>
+@extends('main')
+@section('container')
 <html lang="en">
 <head></head>
 <body>
     <div class="container-fluid">
         <div class="row">
-                <?php if(session('status')): ?>
+                @if (session('status'))
                 <div class="alert alert-success">
-                <?php echo e(session('status')); ?>
-
+                {{ session('status') }}
                 </div>
-                <?php endif; ?>
+                @endif
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
@@ -38,30 +37,32 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $__currentLoopData = $pegawai; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    @foreach ($pegawai as $data)
                                     <tr>
-                                        <td><?php echo e($loop->iteration); ?></td>
-                                        <td><?php echo e($data->id); ?></td>
-                                        <td><?php echo e($data->nama_pegawai); ?></td>
-                                        <td><?php echo e($data->seksi->nama_seksi); ?></td>
-                                        <td><?php echo e($data->tlp_pegawai); ?></td>
-                                        <td><?php echo e($data->username); ?></td>
-                                        <td><?php echo e($data->password); ?></td>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $data->id }}</td>
+                                        <td>{{ $data->nama_pegawai}}</td>
+                                        <td>{{ $data->seksi->nama_seksi }}</td>
+                                        <td>{{ $data->tlp_pegawai }}</td>
+                                        <td>{{ $data->username }}</td>
+                                        <td>{{ $data->password }}</td>
                                         <td class="text-center">
-                                            <a href="/editpegawai<?php echo e($data->id); ?>" class="btn btn-primary btn-sm">
+                                            <a href="/editpegawai{{$data->id}}" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
-                                              
-                                              <form action="/hapuspegawai<?php echo e($data->id); ?>" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
-                                                <?php echo method_field('delete'); ?>
-                                                <?php echo csrf_field(); ?>
+                                              {{-- <button class="btn btn-danger btn-sm">
+                                                <i class="fa fa-trash"> hapus</i>
+                                              </button> --}}
+                                              <form action="/hapuspegawai{{ $data->id }}" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
+                                                @method('delete')
+                                                @csrf
                                                 <button class="btn btn-danger btn-sm">
                                                   <i class="fa fa-trash"> hapus</i>
                                                 </button>
                                               </form>
                                         </td>
                                     </tr>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    @endforeach
                                 </tbody>
                                 </table>
                             </div>
@@ -71,8 +72,7 @@
                 </div>
             </div>
         </div>
-<?php $__env->stopSection(); ?>
+@endsection
 
 </body>
 </html>
-<?php echo $__env->make('main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\PKL\resources\views/pegawai/index.blade.php ENDPATH**/ ?>

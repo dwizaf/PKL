@@ -22,9 +22,6 @@ Route::get('/', function () {
     return view('login');
 });
 
-// Route::get('/', function () {
-//     return view('main');
-// });
 
 Route::get('/dashboard', [Dashboard::class, 'index'] );
 
@@ -43,8 +40,14 @@ Route::get('/editseksi{id}', [SeksiController::class, 'edit'] );
 Route::put('/updateseksi{id}', [SeksiController::class, 'update'] );
 Route::delete('/hapusseksi{id}', [SeksiController::class, 'destroy'] );
 
+
 Route::get('/pegawai', [PegawaiController::class, 'index']);
-Route::get('/tambahpegawai', [PegawaiController::class, 'create'] );
+Route::get('/tambahpegawai', [PegawaiController::class, 'create'])->name('create');
+Route::post('/getseksi', [PegawaiController::class, 'getseksi'])->name('getseksi');
+Route::post('/storepegawai', [PegawaiController::class, 'store']);
+Route::get('/editpegawai{id}', [PegawaiController::class, 'edit'] );
+Route::put('/updatepegawai{id}', [PegawaiController::class, 'update'] );
+Route::delete('/hapuspegawai{id}', [PegawaiController::class, 'destroy'] );
 
 
 
