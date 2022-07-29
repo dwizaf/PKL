@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="form-group" >
                                     <label>Nomor Telepon</label>
-                                    <input type="number" name="tlp_pegawai" class="form-control" autofocus required>
+                                    <input type="number" name="tlp_pegawai" class="form-control" maxlength="13" minlength="10" autofocus required>
                                 </div>
                                 <button type="submit" class="btn btn-success">Save</button>
                             </form>
@@ -62,9 +62,13 @@
             </div>
         </div>
     </div>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+<?php $__env->stopSection(); ?>
+</body>
+</html>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
    
         <script type="text/javascript">
             $(function(){
@@ -96,8 +100,4 @@
         });
 
         </script>
-   
-<?php $__env->stopSection(); ?>
-</body>
-</html>
 <?php echo $__env->make('main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\PKL\resources\views/pegawai/create.blade.php ENDPATH**/ ?>

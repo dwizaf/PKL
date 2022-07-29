@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('seksi_id')->unsigned();
             $table->string('nama_pegawai');
-            $table->integer('tlp_pegawai');
+            $table->char('tlp_pegawai',13);
             $table->string('username');
             $table->string('password');
             $table->timestamps();
