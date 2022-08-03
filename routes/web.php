@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BidangController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard;
@@ -21,6 +22,14 @@ use App\Http\Controllers\KontenController;
 Route::get('/', function () {
     return view('login');
 });
+
+
+Route::get('/dashboard', [Dashboard::class, 'index'] );
+
+Route::get('/register', [AuthController::class, 'register'] );
+Route::get('/login', [AuthController::class, 'login'] );
+
+// Route::get('/login', 'AuthController@login');
 
 
 Route::get('/dashboard', [Dashboard::class, 'index'] );
