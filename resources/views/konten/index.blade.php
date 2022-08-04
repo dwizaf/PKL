@@ -3,10 +3,6 @@
 @section('container')
 <html lang="en">
 <head>
-    {{-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> --}}
     
 </head>
 <body>
@@ -32,24 +28,28 @@
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
-                                        <th>Judul Konten</th>
-                                        <th>Aksi</th>
+                                        <th >No</th>
+                                        <th >ID_Konten</th>
+                                        <th >Judul Konten</th>
+                                        {{-- <th >file</th> --}}
+                                        <th class="text-center">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    @foreach ($konten as $data)
                                     <tr>
-                                        <td>1</td>
-                                        <td>blabla</td>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $data->id }}</td>
+                                        <td>{{ $data->judul }}</td>
+                                        {{-- <td><a href="{{ asset('file/'.$data->file) }}" target="_blank">lihat file</a></td> --}}
                                         <td class="text-center">
-                                            <a href="/detailkonten" class="btn btn-warning btn-sm">
+                                            <a href="/detailkonten{{$data->id}}" class="btn btn-warning btn-sm">
                                                 <i class="fa fa-eye"> lihat</i>
                                               </a>
-                                            <a href="/editkonten" class="btn btn-primary btn-sm">
+                                            <a href="/editkonten{{$data->id}}" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
-                                              <form action="" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus konten?')">
+                                            <form action="/hapuskonten{{ $data->id }}" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                                 @method('delete')
                                                 @csrf
                                                 <button class="btn btn-danger btn-sm">
@@ -58,7 +58,7 @@
                                               </form>
                                         </td>
                                     </tr>
-
+                                    @endforeach
                                 </tbody>
                                 </table>
                             </div>

@@ -3,7 +3,6 @@
 <?php $__env->startSection('container'); ?>
 <html lang="en">
 <head>
-    
 </head>
 <body>
     <div class="container-fluid">
@@ -11,8 +10,20 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h3> Konten Ini Berjudul blabla</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores repellendus molestiae exercitationem voluptatem tempora quo dolore nostrum dolor consequuntur itaque, alias fugit. Architecto rerum animi velit, beatae corrupti quos nam saepe asperiores aliquid quae culpa ea reiciendis ipsam numquam laborum aperiam. Id tempore consequuntur velit vitae corporis, aspernatur praesentium ratione!</p>
+
+                        <div class="pull-right">
+                            <a href="/konten" class="btn btn-secondary btn-sm">
+                              <i class="fa fa-undo"></i> Back
+                            </a>
+                          </div><br>
+
+                        <h3><?php echo e($konten->judul); ?></h3>
+                        <p><?php echo e($konten->isi_konten); ?></p>
+
+                        <td><a href="file/<?php echo e($konten->file); ?>"><button class="btn btn-danger" type="button">File Tambahan</button></a></td><br><br>
+                        <span class="mr-2">Diunggah pada : <?php echo e($konten->updated_at); ?></span> 
+                        
+
                     </div>
                 </div>
             </div>

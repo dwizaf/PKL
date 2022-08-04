@@ -3,10 +3,7 @@
 @section('container')
 <html lang="en">
 <head>
-    {{-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> --}}
+    
 </head>
 <body>
 
@@ -16,48 +13,48 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-1">
                     <div class="card-body">
-                        <h3 class="card-title text-white">Products Sold</h3>
+                        <a href="/bidang"><h3 class="card-title text-white">Bidang</h3></a>
                         <div class="d-inline-block">
                             <h2 class="text-white">4565</h2>
-                            <p class="text-white mb-0">Jan - March 2019</p>
+                            <p class="text-white mb-0"></p>
                         </div>
-                        <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
+                        <span class="float-right display-5 opacity-5"><i class="fa fa-building"></i></span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-2">
                     <div class="card-body">
-                        <h3 class="card-title text-white">Net Profit</h3>
+                        <a href="/seksi"><h3 class="card-title text-white">Seksi</h3></a>
                         <div class="d-inline-block">
-                            <h2 class="text-white">$ 8541</h2>
-                            <p class="text-white mb-0">Jan - March 2019</p>
+                            <h2 class="text-white">8541</h2>
+                            <p class="text-white mb-0"></p>
                         </div>
-                        <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                        <span class="float-right display-5 opacity-5"><i class="fa fa-puzzle-piece"></i></span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-3">
                     <div class="card-body">
-                        <h3 class="card-title text-white">New Customers</h3>
+                        <a href="/pegawai"><h3 class="card-title text-white">User</h3></a>
                         <div class="d-inline-block">
                             <h2 class="text-white">4565</h2>
-                            <p class="text-white mb-0">Jan - March 2019</p>
+                            <p class="text-white mb-0"></p>
                         </div>
-                        <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
+                        <span class="float-right display-5 opacity-5"><i class="fa fa-id-badge"></i></span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-4">
                     <div class="card-body">
-                        <h3 class="card-title text-white">Customer Satisfaction</h3>
+                        <a href="/konten"><h3 class="card-title text-white">Konten</h3></a>
                         <div class="d-inline-block">
-                            <h2 class="text-white">99%</h2>
-                            <p class="text-white mb-0">Jan - March 2019</p>
+                            <h2 class="text-white">99</h2>
+                            <p class="text-white mb-0"></p>
                         </div>
-                        <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                        <span class="float-right display-5 opacity-5"><i class="fa fa-newspaper-o"></i></span>
                     </div>
                 </div>
             </div>
@@ -69,26 +66,28 @@
             <div class="col-lg-12">
                 <div class="row">
                     <div class="col-12">
-
-                        <div class="card">
-                            <div class="card-body pb-0 d-flex justify-content-between">
-                                <div>
-                                    <h3 class="mb-1">Tentang Website Ini</h3><br>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Exercitation ullamco laboris
-                                        nisi ut aliquip ex ea commodo consequat.</p>
-                                </div>
-                            </div>
-                        </div>
     
                         <div class="card">
                             <div class="card-body">
                                 <div class="inline-editor">
-                                    <h3>Kedudukan dan Alamat</h3><br>
-                                    <h5>Kedudukan</h5>
-                                    <p>Dinas Komunikasi dan Inforrnatika merupakan unsur pelaksana otonomi daerah, 
+                                    <h3 class="text-center">DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</h3><br>
+                                    <p>Dinas Komunikasi dan Informatika merupakan unsur pelaksana otonomi daerah, 
                                         dipimpin oleh seorang kepala dinas, yang berada di bawah dan bertanggung jawab kepada 
                                         Gubernur melalui Sekretaris Daerah.</p>
-                                    <h5>Alamat</h5>
+                                    <h5>Tugas dan Fungsi</h5>
+                                    <p>Sesuai dengan Peraturan Gubernur Provinsi Jawa Timur Nomor : 80 Tahun 2016 bahwa Dinas Komunikasi dan Informatika Provinsi Jawa Timur berkedudukan 
+                                        sebagai unsur pelaksana urusan pemerintahan di bidang komunikasi dan informatika, bidang statistik dan bidang persandian yang dipimpin oleh 
+                                        Kepala Dinas yang berkedudukan di bawah dan bertanggung jawab kepada Gubernur melalui Sekretaris Daerah Provinsi. Dinas Komunikasi dan Informatika 
+                                        Provinsi Jawa Timur mempunyai tugas membantu Gubernur menyiapkan bahan pelaksanaan urusan pemerintahan yang menjadi kewenangan Pemerintah 
+                                        Provinsi di Bidang Komunikasi dan informatika serta tugas pembantuan.</p>
+                                    <p>Dalam melaksanakan tugas pokok tersebut Dinas Komunikasi dan Informatika mempunyai fungsi sebagai berikut :</p>
+                                    <h6>a. Perumusan kebijakan di bidang komunikasi dan informatika, statistik dan persandian;</h6>
+                                    <h6>b. Pelaksanaan kebijakan di bidang komunikasi dan informatika, statistik dan persandian;
+                                    <h6>c. Pelaksanaan evaluasi dan pelaporan di bidang komunikasi dan informatika, statistik dan persandian;
+                                    <h6>d. Pelaksanaan administrasi dinas di bidang komunikasi dan informasi dan informatika, statistik dan persandian; dan
+                                    <h6>e. Pelaksanaan fungsi lain yang diberikan oleh gubernur terkait dengan tugas dan fungsinya.</h6>
+                                    
+                                    <br><h5>Alamat</h5>
                                     <p>Dinas Komunikasi dan Informatika Pemerintah Provinsi Jawa Timur</p>
                                     <p>Jl. A Yani 242-244 Surabaya</p>
                                     <ul class="list-icons">

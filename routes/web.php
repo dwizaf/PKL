@@ -59,13 +59,9 @@ Route::put('/updatepegawai{id}', [PegawaiController::class, 'update'] );
 Route::delete('/hapuspegawai{id}', [PegawaiController::class, 'destroy'] );
 
 
-
-
-
-
 Route::get('/konten', [KontenController::class, 'index'] );
 Route::get('/tambahkonten', [KontenController::class, 'create'] );
-Route::get('/detailkonten', [KontenController::class, 'detail'] );
+Route::get('/detailkonten{id}', [KontenController::class, 'detail'] );
 Route::post('/storekonten', [KontenController::class, 'store'] );
 Route::get('/editkonten{id}', [KontenController::class, 'edit'] );
 Route::put('/updatekonten{id}', [KontenController::class, 'update'] );
