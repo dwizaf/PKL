@@ -2,7 +2,9 @@
 @extends('main')
 @section('container')
 <html lang="en">
-<head></head>
+<head>
+  
+</head>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -31,7 +33,8 @@
                                         <th>Nama Pegawai</th>
                                         <th>Seksi</th>
                                         <th>Telepon</th>
-                                        <th>Username</th>
+                                        {{-- <th>Username</th> --}}
+                                        <th>Email</th>
                                         <th>Password</th>
                                         <th></th>
                                     </tr>
@@ -44,7 +47,8 @@
                                         <td>{{ $data->nama_pegawai}}</td>
                                         <td>{{ $data->seksi->nama_seksi }}</td>
                                         <td>{{ $data->tlp_pegawai }}</td>
-                                        <td>{{ $data->username }}</td>
+                                        {{-- <td>{{ $data->username }}</td> --}}
+                                        <td>{{ $data->email }}</td>
                                         <td>{{ $data->password }}</td>
                                         <td class="text-center">
                                             <a href="/editpegawai{{$data->id}}" class="btn btn-primary btn-sm">

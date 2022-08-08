@@ -2,7 +2,9 @@
 
 <?php $__env->startSection('container'); ?>
 <html lang="en">
-<head></head>
+<head>
+  
+</head>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -33,6 +35,7 @@
                                         <th>Seksi</th>
                                         <th>Telepon</th>
                                         <th>Username</th>
+                                        <th>Email</th>
                                         <th>Password</th>
                                         <th></th>
                                     </tr>
@@ -46,6 +49,7 @@
                                         <td><?php echo e($data->seksi->nama_seksi); ?></td>
                                         <td><?php echo e($data->tlp_pegawai); ?></td>
                                         <td><?php echo e($data->username); ?></td>
+                                        <td><?php echo e($data->email); ?></td>
                                         <td><?php echo e($data->password); ?></td>
                                         <td class="text-center">
                                             <a href="/editpegawai<?php echo e($data->id); ?>" class="btn btn-primary btn-sm">

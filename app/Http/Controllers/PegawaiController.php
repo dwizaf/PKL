@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Str;
 use App\Models\Bidang;
 use App\Models\Pegawai;
 use App\Models\Seksi;
@@ -38,8 +38,19 @@ class PegawaiController extends Controller
     }
 
     public function store(Request $request){
-        Pegawai::create($request->except(['_token','submit']));
-        return redirect ('/pegawai')->with('status', 'Data Pegawai berhasil ditambah');
+       //insert ke table users
+       $user = new User;
+       $user->role = 'pegawai';
+       $user->name = $request->username;
+       $user->email = $request->email;
+       $user->password = bcrypt('pegawai');
+       $user->remember_token = Str::random(60);
+       $user->save();
+
+       //insert ke table Pegawai
+       $request->request->add(['user_id' => $user->id]);
+       Pegawai::create($request->except(['_token','submit']));
+       return redirect ('/pegawai')->with('status', 'Data Pegawai berhasil ditambah');
      }
 
      public function edit ($id){

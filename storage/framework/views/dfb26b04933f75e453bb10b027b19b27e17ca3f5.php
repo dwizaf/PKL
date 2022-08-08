@@ -7,9 +7,12 @@
 </head>
 <body>
 
+    
     <div class="container-fluid mt-3">
         
+       
         <div class="row">
+            <?php if(auth()->user()->role=='admin'): ?>
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-1">
                     <div class="card-body">
@@ -46,6 +49,8 @@
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
+           
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-4">
                     <div class="card-body">
@@ -58,7 +63,9 @@
                     </div>
                 </div>
             </div>
+         
         </div>
+        
         
         
 

@@ -7,9 +7,12 @@
 </head>
 <body>
 
+    
     <div class="container-fluid mt-3">
         {{-- ADMIN --}}
+       
         <div class="row">
+            @if(auth()->user()->role=='admin')
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-1">
                     <div class="card-body">
@@ -46,6 +49,8 @@
                     </div>
                 </div>
             </div>
+            @endif
+           
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-4">
                     <div class="card-body">
@@ -58,7 +63,9 @@
                     </div>
                 </div>
             </div>
+         
         </div>
+        
         {{-- ADMIN --}}
         
 

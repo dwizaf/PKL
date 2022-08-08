@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -10,11 +10,15 @@ class AuthController extends Controller
         return view('login');
     }
 
-    public function register(){
-        return view('register');
+    public function postlogin(Request $request){
+        if(Auth::attempt($request->only('email','password'))){
+            return redirect('/dashboard');
+        }
+            return redirect('/login')->with('status', 'Login gagal, email / password tidak sesuai');
     }
 
-    public function postlogin(Request $request){
-        dd($request-> all());
+    public function logout(){
+        Auth::logout();
+        return redirect('/login');
     }
 }
