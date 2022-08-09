@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <a href="/bidang"><h3 class="card-title text-white">Bidang</h3></a>
                         <div class="d-inline-block">
-                            <h2 class="text-white">4565</h2>
+                            <h2 class="text-white">{{ $data1 }}</h2>
                             <p class="text-white mb-0"></p>
                         </div>
                         <span class="float-right display-5 opacity-5"><i class="fa fa-building"></i></span>
@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <a href="/seksi"><h3 class="card-title text-white">Seksi</h3></a>
                         <div class="d-inline-block">
-                            <h2 class="text-white">8541</h2>
+                            <h2 class="text-white">{{ $data2 }}</h2>
                             <p class="text-white mb-0"></p>
                         </div>
                         <span class="float-right display-5 opacity-5"><i class="fa fa-puzzle-piece"></i></span>
@@ -40,9 +40,9 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-3">
                     <div class="card-body">
-                        <a href="/pegawai"><h3 class="card-title text-white">User</h3></a>
+                        <a href="/pegawai"><h3 class="card-title text-white">Pegawai</h3></a>
                         <div class="d-inline-block">
-                            <h2 class="text-white">4565</h2>
+                            <h2 class="text-white">{{ $data }}</h2>
                             <p class="text-white mb-0"></p>
                         </div>
                         <span class="float-right display-5 opacity-5"><i class="fa fa-id-badge"></i></span>
@@ -56,7 +56,7 @@
                     <div class="card-body">
                         <a href="/konten"><h3 class="card-title text-white">Konten</h3></a>
                         <div class="d-inline-block">
-                            <h2 class="text-white">99</h2>
+                            <h2 class="text-white">{{ $data3 }}</h2>
                             <p class="text-white mb-0"></p>
                         </div>
                         <span class="float-right display-5 opacity-5"><i class="fa fa-newspaper-o"></i></span>
