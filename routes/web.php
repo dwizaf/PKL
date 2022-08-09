@@ -23,9 +23,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-// Route::get('/', function () {
-//     return view('login');
-// });
 
 Route::get('/login', [AuthController::class, 'login'] )->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin'] );

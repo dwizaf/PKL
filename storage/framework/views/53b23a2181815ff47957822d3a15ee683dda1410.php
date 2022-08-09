@@ -34,7 +34,7 @@
                                         <th>Nama Pegawai</th>
                                         <th>Seksi</th>
                                         <th>Telepon</th>
-                                        <th>Username</th>
+                                        
                                         <th>Email</th>
                                         <th>Password</th>
                                         <th></th>
@@ -48,7 +48,7 @@
                                         <td><?php echo e($data->nama_pegawai); ?></td>
                                         <td><?php echo e($data->seksi->nama_seksi); ?></td>
                                         <td><?php echo e($data->tlp_pegawai); ?></td>
-                                        <td><?php echo e($data->username); ?></td>
+                                        
                                         <td><?php echo e($data->email); ?></td>
                                         <td><?php echo e($data->password); ?></td>
                                         <td class="text-center">
