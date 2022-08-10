@@ -15,8 +15,14 @@ class SeksiController extends Controller
         $this->seksi = new Seksi();
     }
 
-    public function index(){
-        $seksi = Seksi::all();
+    public function index(Request $request){
+
+        if($request->has('search')){
+            $seksi = Seksi::where('nama_seksi', 'LIKE', '%' .$request->search. '%')->paginate(5);
+        }else{
+            $seksi = Seksi::paginate(5);
+        }
+
         return view('seksi.index',compact(['seksi']));
     }
 

@@ -2,13 +2,7 @@
 @extends('main')
 @section('container')
 <html lang="en">
-<head>
-    {{-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> --}}
-    
-</head>
+<head></head>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -21,6 +15,14 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Data Bidang</h4>
+
+                        <div class="row g-3 align-items-center mt-2">
+                            <div class="col-auto">
+                              <form action="/bidang" method="GET">
+                                <input type="search" id="search" name="search" class="form-control" placeholder="Search" aria-label="Search Dashboard">
+                              </form>
+                            </div>
+                          </div>
 
                             <div class="pull-right">
                                   <a href="/tambahbidang" class="btn btn-success btn-sm">
@@ -63,6 +65,7 @@
                                     @endforeach
                                 </tbody>
                                 </table>
+                                {{ $bidang->links() }}
                             </div>
 
                         </div>

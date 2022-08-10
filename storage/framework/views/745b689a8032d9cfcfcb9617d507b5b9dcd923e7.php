@@ -2,10 +2,7 @@
 
 <?php $__env->startSection('container'); ?>
 <html lang="en">
-<head>
-    
-    
-</head>
+<head></head>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -19,6 +16,14 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Data Seksi</h4>
+
+                        <div class="row g-3 align-items-center mt-2">
+                            <div class="col-auto">
+                              <form action="/seksi" method="GET">
+                                <input type="search" id="search" name="search" class="form-control" placeholder="Search" aria-label="Search Dashboard">
+                              </form>
+                            </div>
+                          </div>
 
                             <div class="pull-right">
                                   <a href="/tambahseksi" class="btn btn-success btn-sm">
@@ -61,6 +66,8 @@
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                                 </table>
+                                <?php echo e($seksi->links()); ?>
+
                             </div>
 
                         </div>

@@ -17,8 +17,14 @@ class PegawaiController extends Controller
         $this->seksi = new Seksi();
     }
 
-    public function index(){
-        $pegawai = Pegawai::all();
+    public function index(Request $request){
+
+        if($request->has('search')){
+            $pegawai = Pegawai::where('nama_pegawai', 'LIKE', '%' .$request->search. '%')->paginate(5);
+        }else{
+            $pegawai = Pegawai::paginate(5);
+        }
+
         return view('pegawai.index',compact(['pegawai']));
     }
 

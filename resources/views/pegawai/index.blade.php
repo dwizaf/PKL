@@ -2,9 +2,7 @@
 @extends('main')
 @section('container')
 <html lang="en">
-<head>
-  
-</head>
+<head></head>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -18,11 +16,19 @@
                     <div class="card-body">
                         <h4 class="card-title">Data Pegawai</h4>
 
+                        <div class="row g-3 align-items-center mt-2">
+                          <div class="col-auto">
+                            <form action="/pegawai" method="GET">
+                              <input type="search" id="search" name="search" class="form-control" placeholder="Search" aria-label="Search Dashboard">
+                            </form>
+                          </div>
+                        </div>
+
                             <div class="pull-right">
-                                  <a href="/tambahpegawai" class="btn btn-success btn-sm">
-                                    <i class="fa fa-plus"></i> Tambah Data
-                                  </a>
-                                </div><br>
+                              <a href="/tambahpegawai" class="btn btn-success btn-sm">
+                                <i class="fa fa-plus"></i> Tambah Data
+                              </a>
+                            </div><br>
                             
                             <div class="table-responsive">
                             <table class="table table-striped table-bordered zero-configuration">
@@ -40,7 +46,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($pegawai as $data)
+                                    @foreach ($pegawai as $index => $data)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $data->id }}</td>
@@ -69,8 +75,8 @@
                                     @endforeach
                                 </tbody>
                                 </table>
+                                {{ $pegawai->links() }}
                             </div>
-
                         </div>
                     </div>
                 </div>

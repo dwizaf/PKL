@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 
 class BidangController extends Controller
 {
-    public function index(){
-        $bidang = Bidang::all();
+    public function index(Request $request){
+
+        if($request->has('search')){
+            $bidang = Bidang::where('nama_bidang', 'LIKE', '%' .$request->search. '%')->paginate(5);
+        }else{
+            $bidang = Bidang::paginate(5);
+        }
+
         return view('bidang.index',compact(['bidang']));
     }
 
