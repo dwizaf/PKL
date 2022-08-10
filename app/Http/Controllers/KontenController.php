@@ -6,8 +6,14 @@ use Illuminate\Http\Request;
 
 class KontenController extends Controller
 {
-    public function index(){
-        $konten = Konten::all();
+    public function index(Request $request){
+
+        if($request->has('search')){
+            $konten = Konten::where('judul', 'LIKE', '%' .$request->search. '%')->paginate(5);
+        }else{
+            $konten = Konten::paginate(5);
+        }
+
         return view('konten.index',compact(['konten']));
     }
 

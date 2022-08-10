@@ -18,6 +18,14 @@
                     <div class="card-body">
                         <h4 class="card-title">Daftar Konten</h4>
 
+                        <div class="row g-3 align-items-center mt-2">
+                            <div class="col-auto">
+                              <form action="/konten" method="GET">
+                                <input type="search" id="search" name="search" class="form-control" placeholder="Search" aria-label="Search Dashboard">
+                              </form>
+                            </div>
+                          </div>
+
                             <div class="pull-right">
                                   <a href="/tambahkonten" class="btn btn-success btn-sm">
                                     <i class="fa fa-plus"></i> Buat Konten
@@ -61,6 +69,7 @@
                                     @endforeach
                                 </tbody>
                                 </table>
+                                {{ $konten->links() }}
                             </div>
 
                         </div>
