@@ -16,7 +16,12 @@
 					<h2 class="heading-section">DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR
                         <br>Knowledge Management System </h2>
 				</div> --}}
-		</div>
+				@if (session('status'))
+            	<div class="alert alert-danger">
+            	{{ session('status') }}
+				</div>
+				@endif
+			</div>
 			<div class="row justify-content-center">
 				<div class="col-md-12 col-lg-10">
 					<div class="wrap d-md-flex">
@@ -34,7 +39,6 @@
 							<div class="text w-100">
 								<h2>Knowledge Management System</h2>
 								<p> DINAS KOMUNIKASI DAN INFORMATIKA PROVINSI JAWA TIMUR</p>
-								{{-- <a href="" class="btn btn-white btn-outline-white">Sign Up</a> --}}
 							</div>
 			            </div>
 
@@ -49,12 +53,12 @@
 						<form action="/postlogin" class="signin-form" method="POST">
 							@csrf
 			      			<div class="form-group mb-3">
-			      				<label class="label" for="name">Username/Email</label>
-			      				<input type="email" name="email" class="form-control" placeholder="Username/Email" required>
+			      				<label class="label" for="name">Email</label>
+			      				<input type="email" name="email" class="form-control" placeholder="Masukkan Email" required>
 			      			</div>
 		            		<div class="form-group mb-3">
 		            			<label class="label" for="password">Password</label>
-		              			<input type="password" name="password" class="form-control" placeholder="Password" required>
+		              			<input type="password" name="password" class="form-control" placeholder="Masukkan Password" required>
 		            		</div>
 		            		
 							<button class="form-control btn btn-primary submit px-3" type="submit">LOGIN</button>

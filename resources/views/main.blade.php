@@ -50,7 +50,7 @@
                     <b class="logo-abbr"><img src="themes/images/logo.png" alt=""> </b>
                     <span class="logo-compact"><img src="themes/images/logo-compact.png" alt=""></span>
                     <span class="brand-title">
-                        <h3>KM Application </h3>
+                        <h4>KMS Application </h4>
                     </span>
                 </a>
             </div>
@@ -118,9 +118,6 @@
                                         </li>
                                         
                                         <hr class="my-2">
-                                        <li>
-                                            <a href="#"><i class="icon-lock"></i> <span>Lock Screen</span></a>
-                                        </li>
                                         <li><a href="/logout"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
@@ -185,12 +182,22 @@
 
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-archive"></i><span class="nav-text">Sekretariat</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="#">Tata Usaha</a></li>
+                            <li><a href="#">Penyusunan Program</a></li>
+                            <li><a href="#">Keuangan</a></li>
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="fa fa-archive"></i><span class="nav-text">Bidang Informasi Publik</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Seksi a</a></li>
-                            <li><a href="#">seksi b</a></li>
-                            <li><a href="#">seksi c</a></li>
+                            <li><a href="#">Layanan Informasi Publik</a></li>
+                            <li><a href="#">Pengelolaan Informasi Publik</a></li>
+                            <li><a href="#">Media Publik</a></li>
                         </ul>
                     </li>
                     <li class="mega-menu mega-menu-sm">
@@ -198,12 +205,53 @@
                             <i class="fa fa-archive"></i><span class="nav-text">Bidang Komunikasi Publik</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="#">Seksi a</a></li>
-                            <li><a href="#">seksi b</a></li>
-                            <li><a href="#">seksi c</a></li>
+                            <li><a href="#">Pengelolaan Opini Publik</a></li>
+                            <li><a href="#">Sumber Daya Komunikasi Publik</a></li>
+                            <li><a href="#">Kemitraan Komunikasi Publik</a></li>
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Aplikasi dan Informatika</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="#">Tata Kelola dan Pemberdayaan Teknologi Informasi dan Komunikasi</a></li>
+                            <li><a href="#">Pengembangan Aplikasi</a></li>
+                            <li><a href="#">Persandian dan Keamanan Informasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Infrastruktur Teknologi Informasi dan Komunikasi</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="#">Jaringan Infrastruktur Teknologi Informasi dan Komunikasi</a></li>
+                            <li><a href="#">Pemeliharaan Infrastruktur Teknologi Informasi dan Komunikasi</a></li>
+                            <li><a href="#">Pengendalian Infrastruktur Teknologi Informasi dan Komunikasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Pengelolaan Data dan Statistik</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="#">Pengelolaan Data</a></li>
+                            <li><a href="#">Statistik</a></li>
+                            <li><a href="#">Evaluasi dan Informasi</a></li>
                         </ul>
                     </li>
 
+                <li class="nav-label">Tools</li>
+                <li>
+                    <a href="/" aria-expanded="false">
+                        <i class="fa fa-home"></i><span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout" aria-expanded="false">
+                        <i class="fa fa-sign-out"></i><span class="nav-text">Logout</span>
+                    </a>
+                </li>
             </div>
         </div>
         <!--**********************************

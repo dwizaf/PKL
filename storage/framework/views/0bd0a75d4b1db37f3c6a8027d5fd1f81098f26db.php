@@ -50,9 +50,9 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="">Home</a></li>
+          <li><a class="nav-link scrollto" href="/dashboard">Dashboard</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Benefit</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="/login">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -95,20 +95,15 @@
         <div class="row content">
           <div class="col-lg-6">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              KMS Diskominfo Jatim adalah sebuah tools atau aplikasi berbasis digital yang dapat digunakan untuk membantu mengatur dan mengelola dokumentasi berupa pengetahuan atau knowledge, 
+              dan informasi umum yang dimiliki oleh masing-masing anggota di dalam sebuah instansi.
             </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            </ul>
+            
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              Dengan memanfaatkan teknologi ini, tentu akan memberikan dampak positif bagi sebuah instansi.
+              KMS memungkinkan pengguna untuk mengakses dokumentasi pengetahuan tersebut di manapun dan kapanpun. 
             </p>
           </div>
         </div>
@@ -122,40 +117,36 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Benefits</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Benefit</h2>
+          <p>Adapun manfaat dari aplikasi Knowledge Management System Diskominfo Jatim ini, diantaranya:</p>
         </div>
 
         <div class="row">
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <div class="icon"><i class="bx bx-search"></i></div>
+              <h4><a href="">Mudahnya pencarian informasi dan pengetahuan dengan cepat dan praktis</a></h4>
             </div>
           </div>
 
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4><a href="">Dapat berkoordinasi ataupun berkolaborasi antar anggota organisasi</a></h4>
             </div>
           </div>
 
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="">Tersedianya informasi dan pengetahuan yang terdigitalisasi dengan baik</a></h4>
             </div>
           </div>
 
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <h4><a href="">Menciptakan tenaga kerja yang lebih informatif dan produktif.</a></h4>
             </div>
           </div>
 
@@ -188,8 +179,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <h4>Sosial Media Kami</h4>
             <div class="social-links mt-3">
               <a href="https://www.youtube.com/channel/UCEe1ees-scoEkTQv3he9PJw" class="youtube"><i class="bx bxl-youtube"></i></a>
               <a href="https://www.instagram.com/kominfojatim/" class="instagram"><i class="bx bxl-instagram"></i></a>

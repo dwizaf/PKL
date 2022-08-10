@@ -33,7 +33,7 @@
                             <h2 class="text-white"><?php echo e($data2); ?></h2>
                             <p class="text-white mb-0"></p>
                         </div>
-                        <span class="float-right display-5 opacity-5"><i class="fa fa-puzzle-piece"></i></span>
+                        <span class="float-right display-5 opacity-5"><i class="fa fa-th-list"></i></span>
                     </div>
                 </div>
             </div>
