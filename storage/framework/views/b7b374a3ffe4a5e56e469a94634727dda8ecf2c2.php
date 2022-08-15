@@ -116,6 +116,11 @@
                                                 <i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill gradient-1">3</div>
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="/changepassword">
+                                                <i class="icon-lock"></i> <span>Change Password</span>
+                                            </a>
+                                        </li>
                                         
                                         <hr class="my-2">
                                         <li><a href="/logout"><i class="icon-key"></i> <span>Logout</span></a></li>

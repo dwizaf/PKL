@@ -25,8 +25,11 @@ Route::get('/', function () {
 
 
 Route::get('/login', [AuthController::class, 'login'] )->name('login');
-Route::post('/postlogin', [AuthController::class, 'postlogin'] );
-Route::get('/logout', [AuthController::class, 'logout'] );
+Route::post('/postlogin', [AuthController::class, 'postlogin']);
+Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/changepassword', [AuthController::class, 'changepassword'])->name('changepassword');
+Route::post('/changepassword', [AuthController::class, 'updatepassword'])->name('updatepassword');
+
 
 // Route::group(['middleware' => 'auth'],function(){
 Route::group(['middleware' => ['auth','checkRole:admin']],function(){
