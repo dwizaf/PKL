@@ -37,6 +37,7 @@
                                         <th>No</th>
                                         <th>ID Pegawai</th>
                                         <th>Nama Pegawai</th>
+                                        <th>Role</th>
                                         <th>Seksi</th>
                                         <th>Telepon</th>
                                         {{-- <th>Username</th> --}}
@@ -53,6 +54,7 @@
                                         <td>{{ $pegawai->firstItem() + $key }}</td>
                                         <td>{{ $data->id }}</td>
                                         <td>{{ $data->nama_pegawai}}</td>
+                                        <td>{{ $data->users->role}}</td>
                                         <td>{{ $data->seksi->nama_seksi }}</td>
                                         <td>{{ $data->tlp_pegawai }}</td>
                                         {{-- <td>{{ $data->username }}</td> --}}

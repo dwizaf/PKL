@@ -37,6 +37,13 @@
                                         <option value="">-- Pilih --</option>
                                     </select>
                                 </div>
+                                <div class="form-group" >
+                                    <label>Role</label>
+                                    <select type="text" name="role" class="form-control" autofocus required>
+                                        <option value="pegawai">pegawai</option>
+                                        <option value="admin">admin</option>
+                                    </select>
+                                </div>
                                 <div class="form-group" hidden>
                                     <label>Username</label>
                                     <input type="text" name="password" class="form-control" value="pegawai">

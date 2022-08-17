@@ -49,7 +49,8 @@ class PegawaiController extends Controller
     );
         //insert ke table users
         $user = new User;
-        $user->role = 'pegawai';
+        // $user->role = 'pegawai';
+        $user->role = $request->role;
         $user->name = $request->username;
         $user->email = $request->email;
         $user->password = bcrypt('pegawai');

@@ -38,6 +38,7 @@
                                         <th>No</th>
                                         <th>ID Pegawai</th>
                                         <th>Nama Pegawai</th>
+                                        <th>Role</th>
                                         <th>Seksi</th>
                                         <th>Telepon</th>
                                         
@@ -54,6 +55,7 @@
                                         <td><?php echo e($pegawai->firstItem() + $key); ?></td>
                                         <td><?php echo e($data->id); ?></td>
                                         <td><?php echo e($data->nama_pegawai); ?></td>
+                                        <td><?php echo e($data->users->role); ?></td>
                                         <td><?php echo e($data->seksi->nama_seksi); ?></td>
                                         <td><?php echo e($data->tlp_pegawai); ?></td>
                                         
