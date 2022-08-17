@@ -2,9 +2,7 @@
 
 <?php $__env->startSection('container'); ?>
 <html lang="en">
-<head>
-  
-</head>
+<head></head>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -49,9 +47,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $__currentLoopData = $pegawai; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    
+                                    <?php $__currentLoopData = $pegawai; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
-                                        <td><?php echo e($loop->iteration); ?></td>
+                                        
+                                        <td><?php echo e($pegawai->firstItem() + $key); ?></td>
                                         <td><?php echo e($data->id); ?></td>
                                         <td><?php echo e($data->nama_pegawai); ?></td>
                                         <td><?php echo e($data->seksi->nama_seksi); ?></td>
@@ -76,8 +76,22 @@
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                                 </table>
+                                <div>
+                                  Showing 
+                                  <?php echo e($pegawai->firstItem()); ?>
+
+                                  to
+                                  <?php echo e($pegawai->lastItem()); ?>
+
+                                  of
+                                  <?php echo e($pegawai->total()); ?>
+
+                                  entries
+                                </div>
+                                <div class="pull-right">
                                 <?php echo e($pegawai->links()); ?>
 
+                              </div>
                             </div>
                         </div>
                     </div>

@@ -22,7 +22,7 @@
                         <div class="row g-3 align-items-center mt-2">
                             <div class="col-auto">
                               <form action="/konten" method="GET">
-                                <input type="search" id="search" name="search" class="form-control" placeholder="Search" aria-label="Search Dashboard">
+                                <input type="search" id="search" name="search" class="form-control" placeholder="Cari Judul Konten" aria-label="Search Dashboard">
                               </form>
                             </div>
                           </div>
@@ -39,17 +39,23 @@
                                     <tr>
                                         <th >No</th>
                                         <th >ID_Konten</th>
+                                        <th >Destination Bidang</th>
                                         <th >Judul Konten</th>
+                                        <th >Author</th>
                                         
                                         <th class="text-center">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $__currentLoopData = $konten; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    
+                                    <?php $__currentLoopData = $konten; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
-                                        <td><?php echo e($loop->iteration); ?></td>
+                                        
+                                        <td><?php echo e($konten->firstItem() + $key); ?></td>
                                         <td><?php echo e($data->id); ?></td>
+                                        <td><?php echo e($data->bidang->nama_bidang); ?></td>
                                         <td><?php echo e($data->judul); ?></td>
+                                        <td><?php echo e($data->users->name); ?></td>
                                         
                                         <td class="text-center">
                                             <a href="/detailkonten<?php echo e($data->id); ?>" class="btn btn-warning btn-sm">
@@ -70,8 +76,22 @@
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                                 </table>
+                                <div>
+                                  Showing 
+                                  <?php echo e($konten->firstItem()); ?>
+
+                                  to
+                                  <?php echo e($konten->lastItem()); ?>
+
+                                  of
+                                  <?php echo e($konten->total()); ?>
+
+                                  entries
+                                </div>
+                                <div class="pull-right">
                                 <?php echo e($konten->links()); ?>
 
+                              </div>
                             </div>
 
                         </div>

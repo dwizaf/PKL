@@ -41,9 +41,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($bidang as $data)
+                                    {{-- @foreach ($bidang as $data) --}}
+                                    @foreach($bidang as $key => $data)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        {{-- <td>{{ $loop->iteration }}</td> --}}
+                                        <td>{{ $bidang->firstItem() + $key }}</td>
                                         <td>{{ $data->id }}</td>
                                         <td>{{ $data->nama_bidang }}</td>
                                         <td class="text-center">
@@ -65,7 +67,18 @@
                                     @endforeach
                                 </tbody>
                                 </table>
+                                <div>
+                                  Showing 
+                                  {{ $bidang->firstItem() }}
+                                  to
+                                  {{ $bidang->lastItem() }}
+                                  of
+                                  {{ $bidang->total() }}
+                                  entries
+                                </div>
+                                <div class="pull-right">
                                 {{ $bidang->links() }}
+                              </div>
                             </div>
 
                         </div>

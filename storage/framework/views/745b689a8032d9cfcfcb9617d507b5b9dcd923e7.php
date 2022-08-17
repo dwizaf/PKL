@@ -37,15 +37,17 @@
                                     <tr>
                                         <th>No</th>
                                         <th>ID_Seksi</th>
-                                        <th>ID_Bidang</th>
+                                        <th>Nama Bidang</th>
                                         <th>Nama Seksi</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $__currentLoopData = $seksi; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    
+                                    <?php $__currentLoopData = $seksi; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
-                                        <td><?php echo e($loop->iteration); ?></td>
+                                        
+                                        <td><?php echo e($seksi->firstItem() + $key); ?></td>
                                         <td><?php echo e($data->id); ?></td>
                                         <td><?php echo e($data->bidang->nama_bidang); ?></td>
                                         <td><?php echo e($data->nama_seksi); ?></td>
@@ -53,7 +55,6 @@
                                             <a href="/editseksi<?php echo e($data->id); ?>" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
-                                              
                                               <form action="/hapusseksi<?php echo e($data->id); ?>" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                                 <?php echo method_field('delete'); ?>
                                                 <?php echo csrf_field(); ?>
@@ -66,8 +67,22 @@
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                                 </table>
+                                <div>
+                                  Showing 
+                                  <?php echo e($seksi->firstItem()); ?>
+
+                                  to
+                                  <?php echo e($seksi->lastItem()); ?>
+
+                                  of
+                                  <?php echo e($seksi->total()); ?>
+
+                                  entries
+                                </div>
+                                <div class="pull-right">
                                 <?php echo e($seksi->links()); ?>
 
+                              </div>
                             </div>
 
                         </div>

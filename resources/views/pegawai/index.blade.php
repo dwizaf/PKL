@@ -46,9 +46,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($pegawai as $index => $data)
+                                    {{-- @foreach ($pegawai as $data) --}}
+                                    @foreach($pegawai as $key => $data)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        {{-- <td>{{ $loop->iteration }}</td> --}}
+                                        <td>{{ $pegawai->firstItem() + $key }}</td>
                                         <td>{{ $data->id }}</td>
                                         <td>{{ $data->nama_pegawai}}</td>
                                         <td>{{ $data->seksi->nama_seksi }}</td>
@@ -75,7 +77,18 @@
                                     @endforeach
                                 </tbody>
                                 </table>
+                                <div>
+                                  Showing 
+                                  {{ $pegawai->firstItem() }}
+                                  to
+                                  {{ $pegawai->lastItem() }}
+                                  of
+                                  {{ $pegawai->total() }}
+                                  entries
+                                </div>
+                                <div class="pull-right">
                                 {{ $pegawai->links() }}
+                              </div>
                             </div>
                         </div>
                     </div>

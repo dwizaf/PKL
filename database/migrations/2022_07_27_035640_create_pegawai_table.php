@@ -15,19 +15,21 @@ return new class extends Migration
     {
         Schema::create('pegawai', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('seksi_id')->unsigned();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('seksi_id')->constrained('seksi')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama_pegawai');
+            $table->string('email');
             $table->char('tlp_pegawai',13);
             $table->string('username');
             $table->string('password');
             $table->timestamps();
         });
 
-        Schema::table('pegawai', function (Blueprint $table) {
-            $table->foreign('seksi_id')->references('id')->on('seksi')
-                    ->onUpdate('cascade')
-                    ->onDelete('cascade');
-        });
+        // Schema::table('pegawai', function (Blueprint $table) {
+        //     $table->foreign('seksi_id')->references('id')->on('seksi')
+        //             ->onUpdate('cascade')
+        //             ->onDelete('cascade');
+        // });
     }
 
     /**

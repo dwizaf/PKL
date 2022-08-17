@@ -36,15 +36,17 @@
                                     <tr>
                                         <th>No</th>
                                         <th>ID_Seksi</th>
-                                        <th>ID_Bidang</th>
+                                        <th>Nama Bidang</th>
                                         <th>Nama Seksi</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($seksi as $data)
+                                    {{-- @foreach ($seksi as $data) --}}
+                                    @foreach($seksi as $key => $data)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        {{-- <td>{{ $loop->iteration }}</td> --}}
+                                        <td>{{ $seksi->firstItem() + $key }}</td>
                                         <td>{{ $data->id }}</td>
                                         <td>{{ $data->bidang->nama_bidang }}</td>
                                         <td>{{ $data->nama_seksi }}</td>
@@ -52,9 +54,6 @@
                                             <a href="/editseksi{{$data->id}}" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
-                                              {{-- <button class="btn btn-danger btn-sm">
-                                                <i class="fa fa-trash"> hapus</i>
-                                              </button> --}}
                                               <form action="/hapusseksi{{ $data->id }}" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                                 @method('delete')
                                                 @csrf
@@ -67,7 +66,18 @@
                                     @endforeach
                                 </tbody>
                                 </table>
+                                <div>
+                                  Showing 
+                                  {{ $seksi->firstItem() }}
+                                  to
+                                  {{ $seksi->lastItem() }}
+                                  of
+                                  {{ $seksi->total() }}
+                                  entries
+                                </div>
+                                <div class="pull-right">
                                 {{ $seksi->links() }}
+                              </div>
                             </div>
 
                         </div>

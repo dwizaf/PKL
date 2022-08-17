@@ -2,10 +2,7 @@
 
 <?php $__env->startSection('container'); ?>
 <html lang="en">
-<head>
-    
-    
-</head>
+<head></head>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -45,9 +42,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $__currentLoopData = $bidang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    
+                                    <?php $__currentLoopData = $bidang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
-                                        <td><?php echo e($loop->iteration); ?></td>
+                                        
+                                        <td><?php echo e($bidang->firstItem() + $key); ?></td>
                                         <td><?php echo e($data->id); ?></td>
                                         <td><?php echo e($data->nama_bidang); ?></td>
                                         <td class="text-center">
@@ -67,8 +66,22 @@
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                                 </table>
+                                <div>
+                                  Showing 
+                                  <?php echo e($bidang->firstItem()); ?>
+
+                                  to
+                                  <?php echo e($bidang->lastItem()); ?>
+
+                                  of
+                                  <?php echo e($bidang->total()); ?>
+
+                                  entries
+                                </div>
+                                <div class="pull-right">
                                 <?php echo e($bidang->links()); ?>
 
+                              </div>
                             </div>
 
                         </div>

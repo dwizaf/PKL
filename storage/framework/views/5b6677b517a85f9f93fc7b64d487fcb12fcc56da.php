@@ -18,6 +18,15 @@
                                 <form action="/storekonten" method="POST" enctype="multipart/form-data">
                                     <?php echo csrf_field(); ?>
                                     
+                                    <div class="form-group">
+                                        <h5><i class="fa fa-paperclip" ></i> Untuk Bidang :</h5>
+                                        <select name="bidang_id" class="form-control" autofocus required>
+                                            <option value="">- pilih -</option> 
+                                            <?php $__currentLoopData = $bidang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <option value="<?php echo e($data->id); ?>"><?php echo e($data->nama_bidang); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>         
+                                    </select>
+                                    </div>
 
                                     <h5><i class="fa fa-paperclip"></i> Judul Konten :</h5>
                                     <div class="form-group">

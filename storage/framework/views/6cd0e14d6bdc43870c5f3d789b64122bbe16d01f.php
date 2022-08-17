@@ -22,7 +22,7 @@
                         <div class="form-validation">
                             <div class="form-group" >
                                 <label>Bidang</label>
-                                <select type="text" name="" id="bidang" class="form-control">
+                                <select type="text" name="" id="bidang" class="form-control" autofocus required>
                                     <option value="">-- Pilih --</option>
                                     <?php $__currentLoopData = $bidang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <option value="<?php echo e($item->id); ?>"><?php echo e($item->nama_bidang); ?></option>
@@ -33,7 +33,7 @@
                             <?php echo csrf_field(); ?>
                                 <div class="form-group" >
                                     <label>Seksi</label>
-                                    <select type="text" name="seksi_id" id="seksi" class="form-control">
+                                    <select type="text" name="seksi_id" id="seksi" class="form-control" autofocus required>
                                         <option value="">-- Pilih --</option>
                                     </select>
                                 </div>
@@ -55,7 +55,24 @@
                                 </div>
                                 <div class="form-group" >
                                     <label>Nomor Telepon</label>
-                                    <input type="number" name="tlp_pegawai" class="form-control" autofocus required>
+                                    <input type="number" name="tlp_pegawai" class="form-control <?php $__errorArgs = ['tlp_pegawai'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>" autofocus>
+                                    <?php $__errorArgs = ['tlp_pegawai'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                                    <div class="invalid-feedback"><?php echo e($message); ?></div>
+                                    <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
                                 </div>
                                 <button type="submit" class="btn btn-success">Save</button>
                             </form>

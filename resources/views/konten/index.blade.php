@@ -21,7 +21,7 @@
                         <div class="row g-3 align-items-center mt-2">
                             <div class="col-auto">
                               <form action="/konten" method="GET">
-                                <input type="search" id="search" name="search" class="form-control" placeholder="Search" aria-label="Search Dashboard">
+                                <input type="search" id="search" name="search" class="form-control" placeholder="Cari Judul Konten" aria-label="Search Dashboard">
                               </form>
                             </div>
                           </div>
@@ -38,17 +38,23 @@
                                     <tr>
                                         <th >No</th>
                                         <th >ID_Konten</th>
+                                        <th >Destination Bidang</th>
                                         <th >Judul Konten</th>
+                                        <th >Author</th>
                                         {{-- <th >file</th> --}}
                                         <th class="text-center">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($konten as $data)
+                                    {{-- @foreach ($konten as $data) --}}
+                                    @foreach($konten as $key => $data)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        {{-- <td>{{ $loop->iteration }}</td> --}}
+                                        <td>{{ $konten->firstItem() + $key }}</td>
                                         <td>{{ $data->id }}</td>
+                                        <td>{{ $data->bidang->nama_bidang }}</td>
                                         <td>{{ $data->judul }}</td>
+                                        <td>{{ $data->users->name }}</td>
                                         {{-- <td><a href="{{ asset('file/'.$data->file) }}" target="_blank">lihat file</a></td> --}}
                                         <td class="text-center">
                                             <a href="/detailkonten{{$data->id}}" class="btn btn-warning btn-sm">
@@ -69,7 +75,18 @@
                                     @endforeach
                                 </tbody>
                                 </table>
+                                <div>
+                                  Showing 
+                                  {{ $konten->firstItem() }}
+                                  to
+                                  {{ $konten->lastItem() }}
+                                  of
+                                  {{ $konten->total() }}
+                                  entries
+                                </div>
+                                <div class="pull-right">
                                 {{ $konten->links() }}
+                              </div>
                             </div>
 
                         </div>

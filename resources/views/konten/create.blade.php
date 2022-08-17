@@ -17,10 +17,19 @@
                             <div class="form-validation">
                                 <form action="/storekonten" method="POST" enctype="multipart/form-data">
                                     @csrf
-                                    {{-- <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> Untuk Bidang :</h5>
+                                    {{-- <h5><i class="fa fa-paperclip" ></i> Untuk Bidang :</h5>
                                     <div class="form-group">
                                         <input type="text" class="form-control bg-transparent" placeholder=" To">
                                     </div> --}}
+                                    <div class="form-group">
+                                        <h5><i class="fa fa-paperclip" ></i> Untuk Bidang :</h5>
+                                        <select name="bidang_id" class="form-control" autofocus required>
+                                            <option value="">- pilih -</option> 
+                                            @foreach ($bidang as $data)
+                                                <option value="{{ $data->id }}">{{ $data->nama_bidang }}</option>
+                                            @endforeach         
+                                    </select>
+                                    </div>
 
                                     <h5><i class="fa fa-paperclip"></i> Judul Konten :</h5>
                                     <div class="form-group">

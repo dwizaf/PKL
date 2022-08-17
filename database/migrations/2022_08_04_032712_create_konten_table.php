@@ -15,9 +15,12 @@ return new class extends Migration
     {
         Schema::create('konten', function (Blueprint $table) {
             $table->id();
-            $table->string('judul')->nullable();
-            $table->text('isi_konten')->nullable();
+            $table->foreignId('bidang_id')->constrained('bidang')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('judul');
+            $table->text('isi_konten');
             $table->string('file')->nullable();
+            $table->integer('views')->nullable();
             $table->timestamps();
         });
     }

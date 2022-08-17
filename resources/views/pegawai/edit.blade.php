@@ -2,7 +2,9 @@
 @extends('main')
 @section('container')
 <html lang="en">
-<head></head>
+<head>
+    
+</head>
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -27,8 +29,12 @@
                                 </div>
                                 <div class="form-group" >
                                     <label>Nomor Telepon</label>
-                                    <input type="text" name="tlp_pegawai" class="form-control" value="{{ $pegawai->tlp_pegawai }}" autofocus required>
+                                    <input type="number" name="tlp_pegawai" class="form-control @error('tlp_pegawai') is-invalid @enderror" value="{{ $pegawai->tlp_pegawai }}" autofocus>
+                                    @error('tlp_pegawai')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
+                               
                                 {{-- <div class="form-group" >
                                     <label>Bidang</label>
                                     <select type="text" name="bidang_id" class="form-control">

@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 use App\Models\Konten;
+use App\Models\Bidang;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class KontenController extends Controller
 {
     public function index(Request $request){
-
+        // $konten = Konten::all();
         if($request->has('search')){
             $konten = Konten::where('judul', 'LIKE', '%' .$request->search. '%')->paginate(5);
         }else{
             $konten = Konten::paginate(5);
         }
-
         return view('konten.index',compact(['konten']));
     }
 
@@ -24,7 +25,8 @@ class KontenController extends Controller
     }
 
     public function create(){
-        return view('konten.create');
+        $bidang = Bidang::all();
+        return view('konten.create',compact(['bidang']));
     }
 
     public function store(Request $request){
@@ -35,9 +37,12 @@ class KontenController extends Controller
         $namadok= time().rand(100,999).".".$dok->getClientOriginalName();
 
         $konten=new Konten;
+        $konten->user_id=Auth::id();
+        $konten->bidang_id=$request->bidang_id;
         $konten->judul=$request->judul;
         $konten->isi_konten=$request->isi_konten;
         $konten->file=$namadok;
+        $konten->views=0;
 
         $dok->move(public_path().'/file',$namadok);
         $konten->save();

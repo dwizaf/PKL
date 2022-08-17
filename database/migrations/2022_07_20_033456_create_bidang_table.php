@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('bidang', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_bidang')->nullable();
+            $table->string('nama_bidang');
             $table->timestamps();
         });
     }

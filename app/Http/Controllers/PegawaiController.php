@@ -18,13 +18,12 @@ class PegawaiController extends Controller
     }
 
     public function index(Request $request){
-
+        // $pegawai = Pegawai::all();
         if($request->has('search')){
             $pegawai = Pegawai::where('nama_pegawai', 'LIKE', '%' .$request->search. '%')->paginate(5);
         }else{
             $pegawai = Pegawai::paginate(5);
         }
-
         return view('pegawai.index',compact(['pegawai']));
     }
 
@@ -44,19 +43,24 @@ class PegawaiController extends Controller
     }
 
     public function store(Request $request){
-       //insert ke table users
-       $user = new User;
-       $user->role = 'pegawai';
-       $user->name = $request->username;
-       $user->email = $request->email;
-       $user->password = bcrypt('pegawai');
-       $user->remember_token = Str::random(60);
-       $user->save();
+        $request->validate([
+            'tlp_pegawai'=>'required|max:13'
+        ],
+    );
+        //insert ke table users
+        $user = new User;
+        $user->role = 'pegawai';
+        $user->name = $request->username;
+        $user->email = $request->email;
+        $user->password = bcrypt('pegawai');
+        $user->remember_token = Str::random(60);
+        $user->save();
 
-       //insert ke table Pegawai
-       $request->request->add(['user_id' => $user->id]);
-       Pegawai::create($request->except(['_token','submit']));
-       return redirect ('/pegawai')->with('status', 'Data Pegawai berhasil ditambah');
+       
+        //insert ke table Pegawai
+        $request->request->add(['user_id' => $user->id]);
+        Pegawai::create($request->except(['_token','submit']));
+        return redirect ('/pegawai')->with('status', 'Data Pegawai berhasil ditambah');
      }
 
      public function edit ($id){
@@ -65,6 +69,10 @@ class PegawaiController extends Controller
     }
 
     public function update ($id, Request $request){
+        $request->validate([
+            'tlp_pegawai'=>'required|max:13'
+        ],
+    );
         $pegawai = Pegawai::find($id);
         $pegawai->update($request->except(['_token','submit']));
         return redirect ('/pegawai')->with('status', 'Data pegawai berhasil diupdate');

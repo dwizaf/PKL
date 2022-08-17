@@ -15,4 +15,8 @@ class Bidang extends Model
     public function seksi(){
         return $this->hasMany(Seksi::class);
     }
+
+    public function konten(){
+        return $this-> hasMany(Konten::class);
+    }
 }

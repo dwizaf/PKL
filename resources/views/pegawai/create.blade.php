@@ -22,7 +22,7 @@
                         <div class="form-validation">
                             <div class="form-group" >
                                 <label>Bidang</label>
-                                <select type="text" name="" id="bidang" class="form-control">
+                                <select type="text" name="" id="bidang" class="form-control" autofocus required>
                                     <option value="">-- Pilih --</option>
                                     @foreach ($bidang as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama_bidang }}</option>
@@ -33,7 +33,7 @@
                             @csrf
                                 <div class="form-group" >
                                     <label>Seksi</label>
-                                    <select type="text" name="seksi_id" id="seksi" class="form-control">
+                                    <select type="text" name="seksi_id" id="seksi" class="form-control" autofocus required>
                                         <option value="">-- Pilih --</option>
                                     </select>
                                 </div>
@@ -55,7 +55,10 @@
                                 </div>
                                 <div class="form-group" >
                                     <label>Nomor Telepon</label>
-                                    <input type="number" name="tlp_pegawai" class="form-control" autofocus required>
+                                    <input type="number" name="tlp_pegawai" class="form-control @error('tlp_pegawai') is-invalid @enderror" autofocus>
+                                    @error('tlp_pegawai')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <button type="submit" class="btn btn-success">Save</button>
                             </form>
