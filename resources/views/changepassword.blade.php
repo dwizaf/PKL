@@ -2,8 +2,7 @@
 @extends('main')
 @section('container')
 <html lang="en">
-<head>
-</head>
+<head></head>
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -33,21 +32,33 @@
                                 @endif
                                 <div class="form-group" >
                                     <label>Masukkan Password Lama</label>
-                                    <input type="password" name="passwordlama" class="form-control @error ('passwordlama') is-invalid @enderror">
+                                    <input type="password" name="passwordlama" id="inputpass1" class="form-control @error ('passwordlama') is-invalid @enderror">
+                                    <span class="eye" onclick="myFunction1()">
+                                        <i id="hide1" class="fa fa-eye"></i>
+                                        <i id="hide2" class="fa fa-eye-slash"></i>
+                                    </span>
                                     @error('passwordlama')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group" >
                                     <label>Masukkan Password Baru</label>
-                                    <input type="password" name="passwordbaru" class="form-control @error ('passwordbaru') is-invalid @enderror">
+                                    <input type="password" name="passwordbaru" id="inputpass2" class="form-control @error ('passwordbaru') is-invalid @enderror">
+                                    <span class="eye" onclick="myFunction2()">
+                                        <i id="hide3" class="fa fa-eye"></i>
+                                        <i id="hide4" class="fa fa-eye-slash"></i>
+                                    </span>
                                     @error('passwordbaru')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group" >
                                     <label>Konfirmasi Masukkan Password Baru</label>
-                                    <input type="password" name="passwordbaru_confirmation" class="form-control @error ('passwordbaru_confirmation') is-invalid @enderror">
+                                    <input type="password" name="passwordbaru_confirmation" id="inputpass3" class="form-control @error ('passwordbaru_confirmation') is-invalid @enderror">
+                                    <span class="eye" onclick="myFunction3()">
+                                        <i id="hide5" class="fa fa-eye"></i>
+                                        <i id="hide6" class="fa fa-eye-slash"></i>
+                                    </span>
                                     @error('passwordbaru_confirmation')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -62,7 +73,55 @@
             </div>
         </div>
     </div>
-   
+    <script>
+        function myFunction1() {
+            var x = document.getElementById("inputpass1");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+    
+            if(x.type === 'password'){
+                x.type = 'text';
+                y.style.display = "inline-block";
+                z.style.display = "none";
+            } else{
+                x.type = 'password';
+                y.style.display = "none";
+                z.style.display = "inline-block";
+            }
+        }
+
+        function myFunction2() {
+            var x = document.getElementById("inputpass2");
+            var y = document.getElementById("hide3");
+            var z = document.getElementById("hide4");
+    
+            if(x.type === 'password'){
+                x.type = 'text';
+                y.style.display = "inline-block";
+                z.style.display = "none";
+            } else{
+                x.type = 'password';
+                y.style.display = "none";
+                z.style.display = "inline-block";
+            }
+        }
+
+        function myFunction3() {
+            var x = document.getElementById("inputpass3");
+            var y = document.getElementById("hide5");
+            var z = document.getElementById("hide6");
+    
+            if(x.type === 'password'){
+                x.type = 'text';
+                y.style.display = "inline-block";
+                z.style.display = "none";
+            } else{
+                x.type = 'password';
+                y.style.display = "none";
+                z.style.display = "inline-block";
+            }
+        }
+    </script>
 @endsection
 </body>
 </html>

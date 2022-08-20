@@ -50,11 +50,13 @@
 			      			</div>
 		            		<div class="form-group mb-3">
 		            			<label class="label" for="password">Password</label>
-		              			<input type="password" name="password" class="form-control" placeholder="Masukkan Password" required>
+								<input type="password" name="password" class="form-control" placeholder="Masukkan Password" id="inputpass" required>
+								<span class="eye" onclick="myFunction()">
+									<i id="hide1" class="fa fa-eye"></i>
+									<i id="hide2" class="fa fa-eye-slash"></i>
+								</span>
 		            		</div>
-		            		
-							<button class="form-control btn btn-primary submit px-3" type="submit">LOGIN</button>
-		            		
+							<button class="form-control btn btn-primary submit px-3" id="submit" type="submit">LOGIN</button>
 		          		</form>
 
 		        </div>
@@ -63,6 +65,23 @@
 	</div>
 </div>
 </section>
+<script>
+	function myFunction() {
+		var x = document.getElementById("inputpass");
+		var y = document.getElementById("hide1");
+		var z = document.getElementById("hide2");
+
+		if(x.type === 'password'){
+			x.type = 'text';
+			y.style.display = "inline-block";
+			z.style.display = "none";
+		} else{
+			x.type = 'password';
+			y.style.display = "none";
+			z.style.display = "inline-block";
+		}
+	}
+</script>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.js"></script>

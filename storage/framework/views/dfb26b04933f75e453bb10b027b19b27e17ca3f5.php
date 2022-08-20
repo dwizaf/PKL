@@ -2,15 +2,12 @@
 
 <?php $__env->startSection('container'); ?>
 <html lang="en">
-<head>
-    
-</head>
+<head></head>
 <body>
 
     
     <div class="container-fluid mt-3">
         
-       
         <div class="row">
             <?php if(auth()->user()->role=='admin'): ?>
             <div class="col-lg-3 col-sm-6">

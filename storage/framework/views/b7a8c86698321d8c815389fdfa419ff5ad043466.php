@@ -2,8 +2,7 @@
 
 <?php $__env->startSection('container'); ?>
 <html lang="en">
-<head>
-</head>
+<head></head>
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -35,7 +34,7 @@
                                 <?php endif; ?>
                                 <div class="form-group" >
                                     <label>Masukkan Password Lama</label>
-                                    <input type="password" name="passwordlama" class="form-control <?php $__errorArgs = ['passwordlama'];
+                                    <input type="password" name="passwordlama" id="inputpass1" class="form-control <?php $__errorArgs = ['passwordlama'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -43,6 +42,10 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>">
+                                    <span class="eye" onclick="myFunction1()">
+                                        <i id="hide1" class="fa fa-eye"></i>
+                                        <i id="hide2" class="fa fa-eye-slash"></i>
+                                    </span>
                                     <?php $__errorArgs = ['passwordlama'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -56,7 +59,7 @@ unset($__errorArgs, $__bag); ?>
                                 </div>
                                 <div class="form-group" >
                                     <label>Masukkan Password Baru</label>
-                                    <input type="password" name="passwordbaru" class="form-control <?php $__errorArgs = ['passwordbaru'];
+                                    <input type="password" name="passwordbaru" id="inputpass2" class="form-control <?php $__errorArgs = ['passwordbaru'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -64,6 +67,10 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>">
+                                    <span class="eye" onclick="myFunction2()">
+                                        <i id="hide3" class="fa fa-eye"></i>
+                                        <i id="hide4" class="fa fa-eye-slash"></i>
+                                    </span>
                                     <?php $__errorArgs = ['passwordbaru'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -77,7 +84,7 @@ unset($__errorArgs, $__bag); ?>
                                 </div>
                                 <div class="form-group" >
                                     <label>Konfirmasi Masukkan Password Baru</label>
-                                    <input type="password" name="passwordbaru_confirmation" class="form-control <?php $__errorArgs = ['passwordbaru_confirmation'];
+                                    <input type="password" name="passwordbaru_confirmation" id="inputpass3" class="form-control <?php $__errorArgs = ['passwordbaru_confirmation'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -85,6 +92,10 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>">
+                                    <span class="eye" onclick="myFunction3()">
+                                        <i id="hide5" class="fa fa-eye"></i>
+                                        <i id="hide6" class="fa fa-eye-slash"></i>
+                                    </span>
                                     <?php $__errorArgs = ['passwordbaru_confirmation'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -106,7 +117,55 @@ unset($__errorArgs, $__bag); ?>
             </div>
         </div>
     </div>
-   
+    <script>
+        function myFunction1() {
+            var x = document.getElementById("inputpass1");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+    
+            if(x.type === 'password'){
+                x.type = 'text';
+                y.style.display = "inline-block";
+                z.style.display = "none";
+            } else{
+                x.type = 'password';
+                y.style.display = "none";
+                z.style.display = "inline-block";
+            }
+        }
+
+        function myFunction2() {
+            var x = document.getElementById("inputpass2");
+            var y = document.getElementById("hide3");
+            var z = document.getElementById("hide4");
+    
+            if(x.type === 'password'){
+                x.type = 'text';
+                y.style.display = "inline-block";
+                z.style.display = "none";
+            } else{
+                x.type = 'password';
+                y.style.display = "none";
+                z.style.display = "inline-block";
+            }
+        }
+
+        function myFunction3() {
+            var x = document.getElementById("inputpass3");
+            var y = document.getElementById("hide5");
+            var z = document.getElementById("hide6");
+    
+            if(x.type === 'password'){
+                x.type = 'text';
+                y.style.display = "inline-block";
+                z.style.display = "none";
+            } else{
+                x.type = 'password';
+                y.style.display = "none";
+                z.style.display = "inline-block";
+            }
+        }
+    </script>
 <?php $__env->stopSection(); ?>
 </body>
 </html>
