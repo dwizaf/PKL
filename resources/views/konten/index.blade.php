@@ -38,7 +38,8 @@
                                     <tr>
                                         <th >No</th>
                                         <th >ID_Konten</th>
-                                        <th >Destination Bidang</th>
+                                        {{-- <th >Destination Bidang</th> --}}
+                                        <th >Tujuan Seksi</th>
                                         <th >Judul Konten</th>
                                         <th >Author</th>
                                         {{-- <th >file</th> --}}
@@ -52,7 +53,8 @@
                                         {{-- <td>{{ $loop->iteration }}</td> --}}
                                         <td>{{ $konten->firstItem() + $key }}</td>
                                         <td>{{ $data->id }}</td>
-                                        <td>{{ $data->bidang->nama_bidang }}</td>
+                                        {{-- <td>{{ $data->bidang->nama_bidang }}</td> --}}
+                                        <td>{{ $data->seksi->nama_seksi }}</td>
                                         <td>{{ $data->judul }}</td>
                                         <td>{{ $data->users->name }}</td>
                                         {{-- <td><a href="{{ asset('file/'.$data->file) }}" target="_blank">lihat file</a></td> --}}
@@ -60,6 +62,9 @@
                                             <a href="/detailkonten{{$data->id}}" class="btn btn-warning btn-sm">
                                                 <i class="fa fa-eye"> lihat</i>
                                               </a>
+
+                                              {{-- @if(auth()->user()->role=='admin')
+                                              @if(auth()->user()->name=='mad3') --}}
                                             <a href="/editkonten{{$data->id}}" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
@@ -70,6 +75,9 @@
                                                   <i class="fa fa-trash"> hapus</i>
                                                 </button>
                                               </form>
+                                              {{-- @endif
+                                              @endif --}}
+
                                         </td>
                                     </tr>
                                     @endforeach

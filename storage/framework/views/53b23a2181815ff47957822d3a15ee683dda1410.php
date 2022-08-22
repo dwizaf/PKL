@@ -41,9 +41,9 @@
                                         <th>Role</th>
                                         <th>Seksi</th>
                                         <th>Telepon</th>
-                                        
+                                        <th>Username</th>
                                         <th>Email</th>
-                                        <th>Password</th>
+                                        
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -58,14 +58,14 @@
                                         <td><?php echo e($data->users->role); ?></td>
                                         <td><?php echo e($data->seksi->nama_seksi); ?></td>
                                         <td><?php echo e($data->tlp_pegawai); ?></td>
-                                        
+                                        <td><?php echo e($data->username); ?></td>
                                         <td><?php echo e($data->email); ?></td>
-                                        <td><?php echo e($data->password); ?></td>
+                                        
                                         <td class="text-center">
                                             <a href="/editpegawai<?php echo e($data->id); ?>" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
-                                              
+                                
                                               <form action="/hapuspegawai<?php echo e($data->id); ?>" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                                 <?php echo method_field('delete'); ?>
                                                 <?php echo csrf_field(); ?>

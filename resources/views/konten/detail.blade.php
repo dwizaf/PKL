@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <!-- #/ container -->
+    
 @endsection
 </body>
 </html>

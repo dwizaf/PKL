@@ -18,11 +18,6 @@
                                 <form action="/updatekonten{{ $konten->id }}" method="POST" enctype="multipart/form-data">
                                     @method('put') 
                                     @csrf
-                                    {{-- <h5 class="m-b-20"><i class="fa fa-paperclip m-r-5 f-s-18"></i> Untuk Bidang :</h5>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control bg-transparent" placeholder=" To">
-                                    </div> --}}
-
                                     <h5><i class="fa fa-paperclip"></i> Judul Konten :</h5>
                                     <div class="form-group">
                                         <input type="text" name="judul" class="form-control bg-transparent" value="{{ $konten->judul }}" autofocus required>

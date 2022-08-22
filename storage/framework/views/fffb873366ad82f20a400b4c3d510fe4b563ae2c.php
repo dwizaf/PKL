@@ -39,7 +39,8 @@
                                     <tr>
                                         <th >No</th>
                                         <th >ID_Konten</th>
-                                        <th >Destination Bidang</th>
+                                        
+                                        <th >Tujuan Seksi</th>
                                         <th >Judul Konten</th>
                                         <th >Author</th>
                                         
@@ -53,7 +54,8 @@
                                         
                                         <td><?php echo e($konten->firstItem() + $key); ?></td>
                                         <td><?php echo e($data->id); ?></td>
-                                        <td><?php echo e($data->bidang->nama_bidang); ?></td>
+                                        
+                                        <td><?php echo e($data->seksi->nama_seksi); ?></td>
                                         <td><?php echo e($data->judul); ?></td>
                                         <td><?php echo e($data->users->name); ?></td>
                                         
@@ -61,6 +63,8 @@
                                             <a href="/detailkonten<?php echo e($data->id); ?>" class="btn btn-warning btn-sm">
                                                 <i class="fa fa-eye"> lihat</i>
                                               </a>
+
+                                              
                                             <a href="/editkonten<?php echo e($data->id); ?>" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
@@ -71,6 +75,8 @@
                                                   <i class="fa fa-trash"> hapus</i>
                                                 </button>
                                               </form>
+                                              
+
                                         </td>
                                     </tr>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

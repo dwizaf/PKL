@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 use App\Models\Konten;
 use App\Models\Bidang;
+use App\Models\Seksi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class KontenController extends Controller
 {
+    function __construct()
+    {
+        $this->konten = new Konten();
+        $this->seksi = new Seksi();
+    }
+
     public function index(Request $request){
         // $konten = Konten::all();
         if($request->has('search')){
@@ -20,13 +27,22 @@ class KontenController extends Controller
 
     public function detail($id){
         $konten = Konten::find($id);
-        // return $konten;
         return view('konten.detail', compact('konten'));
     }
 
     public function create(){
+        $konten = Konten::all();
         $bidang = Bidang::all();
-        return view('konten.create',compact(['bidang']));
+        return view('konten.create', compact(['bidang']));
+    }
+
+    public function getseksi(request $request){
+        $bidang_id = $request->bidang_id;
+        $seksis = Seksi::where('bidang_id', '=', $bidang_id)->get();
+
+        foreach($seksis as $seksi){
+            echo "<option value='$seksi->id'> $seksi->nama_seksi </option>";
+        }
     }
 
     public function store(Request $request){
@@ -38,7 +54,8 @@ class KontenController extends Controller
 
         $konten=new Konten;
         $konten->user_id=Auth::id();
-        $konten->bidang_id=$request->bidang_id;
+        // $konten->bidang_id=$request->bidang_id;
+        $konten->seksi_id=$request->seksi_id;
         $konten->judul=$request->judul;
         $konten->isi_konten=$request->isi_konten;
         $konten->file=$namadok;

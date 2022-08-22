@@ -2,8 +2,7 @@
 @extends('main')
 @section('container')
 <html lang="en">
-<head>
-</head>
+<head></head>
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center">

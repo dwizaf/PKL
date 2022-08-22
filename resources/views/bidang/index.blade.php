@@ -2,7 +2,9 @@
 @extends('main')
 @section('container')
 <html lang="en">
-<head></head>
+<head>
+
+</head>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -52,9 +54,7 @@
                                             <a href="/editbidang{{$data->id}}" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
-                                              {{-- <button class="btn btn-danger btn-sm">
-                                                <i class="fa fa-trash"> hapus</i>
-                                              </button> --}}
+                                              
                                               <form action="/hapusbidang{{ $data->id }}" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                                 @method('delete')
                                                 @csrf

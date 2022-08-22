@@ -15,7 +15,11 @@ class Konten extends Model
         return $this-> belongsTo (User::class, 'user_id', 'id');
     }
 
-    public function bidang(){
-        return $this-> belongsTo (Bidang::class, 'bidang_id', 'id');
+    // public function bidang(){
+    //     return $this-> belongsTo (Bidang::class, 'bidang_id', 'id');
+    // }
+
+    public function seksi(){
+        return $this-> belongsTo (Seksi::class, 'seksi_id', 'id');
     }
 }

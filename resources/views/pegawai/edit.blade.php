@@ -35,15 +35,6 @@
                                     @enderror
                                 </div>
                                
-                                {{-- <div class="form-group" >
-                                    <label>Bidang</label>
-                                    <select type="text" name="bidang_id" class="form-control">
-                                        <option value="">-- Pilih --</option>
-                                        @foreach ($seksi as $item)
-                                            <option value="{{ $item->bidang_id }}">{{ $item->nama_bidang }}</option>
-                                        @endforeach
-                                    </select>
-                                </div> --}}
                                 <button type="submit" class="btn btn-success">Save</button>
                             </form>
         

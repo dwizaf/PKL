@@ -71,7 +71,8 @@ Route::group(['middleware' => ['auth','checkRole:admin,pegawai']],function(){
     Route::get('/dashboard', [Dashboard::class, 'index'] );
 
     Route::get('/konten', [KontenController::class, 'index'] );
-    Route::get('/tambahkonten', [KontenController::class, 'create'] );
+    Route::get('/tambahkonten', [KontenController::class, 'create'] )->name('create');
+    Route::post('/getseksi', [KontenController::class, 'getseksi'])->name('getseksi');
     Route::get('/detailkonten{id}', [KontenController::class, 'detail'] );
     Route::post('/storekonten', [KontenController::class, 'store'] );
     Route::get('/editkonten{id}', [KontenController::class, 'edit'] );

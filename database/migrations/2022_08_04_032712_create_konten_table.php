@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('konten', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('bidang_id')->constrained('bidang')->onDelete('cascade')->onUpdate('cascade');
+            // $table->foreignId('bidang_id')->constrained('bidang')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('seksi_id')->constrained('seksi')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('judul');
             $table->text('isi_konten');

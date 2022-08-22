@@ -40,9 +40,9 @@
                                         <th>Role</th>
                                         <th>Seksi</th>
                                         <th>Telepon</th>
-                                        {{-- <th>Username</th> --}}
+                                        <th>Username</th>
                                         <th>Email</th>
-                                        <th>Password</th>
+                                        {{-- <th>Password</th> --}}
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -57,16 +57,14 @@
                                         <td>{{ $data->users->role}}</td>
                                         <td>{{ $data->seksi->nama_seksi }}</td>
                                         <td>{{ $data->tlp_pegawai }}</td>
-                                        {{-- <td>{{ $data->username }}</td> --}}
+                                        <td>{{ $data->username }}</td>
                                         <td>{{ $data->email }}</td>
-                                        <td>{{ $data->password }}</td>
+                                        {{-- <td>{{ $data->password }}</td> --}}
                                         <td class="text-center">
                                             <a href="/editpegawai{{$data->id}}" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
-                                              {{-- <button class="btn btn-danger btn-sm">
-                                                <i class="fa fa-trash"> hapus</i>
-                                              </button> --}}
+                                
                                               <form action="/hapuspegawai{{ $data->id }}" method="post" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                                 @method('delete')
                                                 @csrf
