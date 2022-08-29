@@ -18,8 +18,6 @@
                                 <form action="/updatekonten<?php echo e($konten->id); ?>" method="POST" enctype="multipart/form-data">
                                     <?php echo method_field('put'); ?> 
                                     <?php echo csrf_field(); ?>
-                                    
-
                                     <h5><i class="fa fa-paperclip"></i> Judul Konten :</h5>
                                     <div class="form-group">
                                         <input type="text" name="judul" class="form-control bg-transparent" value="<?php echo e($konten->judul); ?>" autofocus required>

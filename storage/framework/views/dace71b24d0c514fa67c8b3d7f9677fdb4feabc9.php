@@ -3,7 +3,6 @@
 <?php $__env->startSection('container'); ?>
 <html lang="en">
 <head>
-    
 
 </head>
 <body>

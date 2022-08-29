@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <!-- #/ container -->
+    
 <?php $__env->stopSection(); ?>
 </body>
 </html>

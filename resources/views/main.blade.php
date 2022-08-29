@@ -169,7 +169,7 @@
                         </a>
                     </li>
 
-                     <li class="nav-label">Bidang</li>
+                     {{-- <li class="nav-label">Bidang</li> --}}
 
 
                     {{-- @foreach ($bidang as $data)
@@ -187,7 +187,7 @@
                     @endforeach --}}
                    
 
-                    <li class="mega-menu mega-menu-sm">
+                    {{-- <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="fa fa-archive"></i><span class="nav-text">Sekretariat</span>
                         </a>
@@ -246,7 +246,7 @@
                             <li><a href="#">Statistik</a></li>
                             <li><a href="#">Evaluasi dan Informasi</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
 
                 <li class="nav-label">Tools</li>
                 <li>
