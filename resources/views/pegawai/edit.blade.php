@@ -11,7 +11,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4>Edit Data Bidang</h4><br>
+                        <h4>Edit Data Pegawai</h4><br>
 
                         <div class="pull-right">
                             <a href="/pegawai" class="btn btn-secondary btn-sm">
