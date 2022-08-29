@@ -29,6 +29,11 @@ Route::post('/postlogin', [AuthController::class, 'postlogin']);
 Route::get('/logout', [AuthController::class, 'logout']);
 Route::get('/changepassword', [AuthController::class, 'changepassword'])->name('changepassword');
 Route::post('/changepassword', [AuthController::class, 'updatepassword'])->name('updatepassword');
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/editprofile{id}', [AuthController::class, 'edit'] );
+Route::put('/updateprofile{id}', [AuthController::class, 'update'] );
 
 
 // Route::group(['middleware' => 'auth'],function(){

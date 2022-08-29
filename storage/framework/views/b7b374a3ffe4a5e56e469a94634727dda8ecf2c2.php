@@ -111,7 +111,7 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="icon-user"></i> <span>Profile</span></a>
+                                            <a href="/profile"><i class="icon-user"></i> <span>Profile</span></a>
                                         </li>
                                         <li>
                                             <a href="javascript:void()">
@@ -168,15 +168,7 @@
                             <i class="fa fa-clipboard"></i><span class="nav-text">Konten</span>
                         </a>
                     </li>
-
-                     
-
-
                     
-                   
-
-                    
-
                 <li class="nav-label">Tools</li>
                 <li>
                     <a href="/" aria-expanded="false">

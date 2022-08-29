@@ -111,7 +111,7 @@
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="icon-user"></i> <span>Profile</span></a>
+                                            <a href="/profile"><i class="icon-user"></i> <span>Profile</span></a>
                                         </li>
                                         <li>
                                             <a href="javascript:void()">
@@ -168,86 +168,7 @@
                             <i class="fa fa-clipboard"></i><span class="nav-text">Konten</span>
                         </a>
                     </li>
-
-                     {{-- <li class="nav-label">Bidang</li> --}}
-
-
-                    {{-- @foreach ($bidang as $data)
-                    <li class="mega-menu mega-menu-sm">
-                        
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">{{ $data->nama_bidang }}</span>
-                        </a>
-                        @foreach ($seksi as $data)
-                        <ul aria-expanded="false">
-                            <li><a href="#">{{ $data->nama_seksi }}</a></li>
-                        </ul>
-                        @endforeach
-                    </li>
-                    @endforeach --}}
-                   
-
-                    {{-- <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Sekretariat</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Tata Usaha</a></li>
-                            <li><a href="#">Penyusunan Program</a></li>
-                            <li><a href="#">Keuangan</a></li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Informasi Publik</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Layanan Informasi Publik</a></li>
-                            <li><a href="#">Pengelolaan Informasi Publik</a></li>
-                            <li><a href="#">Media Publik</a></li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Komunikasi Publik</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Pengelolaan Opini Publik</a></li>
-                            <li><a href="#">Sumber Daya Komunikasi Publik</a></li>
-                            <li><a href="#">Kemitraan Komunikasi Publik</a></li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Aplikasi dan Informatika</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Tata Kelola dan Pemberdayaan Teknologi Informasi dan Komunikasi</a></li>
-                            <li><a href="#">Pengembangan Aplikasi</a></li>
-                            <li><a href="#">Persandian dan Keamanan Informasi</a></li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Infrastruktur Teknologi Informasi dan Komunikasi</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Jaringan Infrastruktur Teknologi Informasi dan Komunikasi</a></li>
-                            <li><a href="#">Pemeliharaan Infrastruktur Teknologi Informasi dan Komunikasi</a></li>
-                            <li><a href="#">Pengendalian Infrastruktur Teknologi Informasi dan Komunikasi</a></li>
-                        </ul>
-                    </li>
-                    <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="fa fa-archive"></i><span class="nav-text">Bidang Pengelolaan Data dan Statistik</span>
-                        </a>
-                        <ul aria-expanded="false">
-                            <li><a href="#">Pengelolaan Data</a></li>
-                            <li><a href="#">Statistik</a></li>
-                            <li><a href="#">Evaluasi dan Informasi</a></li>
-                        </ul>
-                    </li> --}}
-
+                    
                 <li class="nav-label">Tools</li>
                 <li>
                     <a href="/" aria-expanded="false">

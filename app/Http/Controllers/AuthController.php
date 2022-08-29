@@ -54,6 +54,18 @@ class AuthController extends Controller
         return back()->with("status", "Password berhasil diubah!");
     }
 
+    public function edit ($id){
+        $profile = User::find($id);
+        return view('editprofile', compact('profile'));
+    }
+
+    public function update ($id, Request $request){
+        
+        $profile = User::find($id);
+        $profile->update($request->except(['_token','submit']));
+        return redirect ('/profile')->with('status', 'Data Anda berhasil diupdate');
+    }
+
     public function logout(){
         Auth::logout();
         return redirect('/');

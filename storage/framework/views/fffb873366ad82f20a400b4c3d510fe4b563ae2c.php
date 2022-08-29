@@ -64,7 +64,8 @@
                                                 <i class="fa fa-eye"> lihat</i>
                                               </a>
 
-                                              
+                                            <?php if($data->user_id==auth()->user()->id || auth()->user()->role=='admin'): ?>
+
                                             <a href="/editkonten<?php echo e($data->id); ?>" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
@@ -75,7 +76,7 @@
                                                   <i class="fa fa-trash"> hapus</i>
                                                 </button>
                                               </form>
-                                              
+                                              <?php endif; ?>
 
                                         </td>
                                     </tr>

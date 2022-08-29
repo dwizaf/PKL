@@ -63,8 +63,8 @@
                                                 <i class="fa fa-eye"> lihat</i>
                                               </a>
 
-                                              {{-- @if(auth()->user()->role=='admin')
-                                              @if(auth()->user()->name=='mad3') --}}
+                                            @if($data->user_id==auth()->user()->id || auth()->user()->role=='admin')
+
                                             <a href="/editkonten{{$data->id}}" class="btn btn-primary btn-sm">
                                               <i class="fa fa-pencil"> edit</i>
                                             </a>
@@ -75,8 +75,7 @@
                                                   <i class="fa fa-trash"> hapus</i>
                                                 </button>
                                               </form>
-                                              {{-- @endif
-                                              @endif --}}
+                                              @endif
 
                                         </td>
                                     </tr>
